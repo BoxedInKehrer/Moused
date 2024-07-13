@@ -1,0 +1,87 @@
+    # Project definitions (do not edit)
+Task: Moused_4
+scorer: David
+date: Jul10
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: /home/box/coding/CTIR/Moused_4-David-2024-07-10
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  /home/box/coding/CTIR/videos/experiment_1/E1_front.avi:
+    crop: 0, 968, 0, 608
+  /home/box/coding/CTIR/videos/experiment_1/E1_side.avi:
+    crop: 0, 968, 0, 608
+  /home/box/coding/CTIR/videos/experiment_1/E1_top.avi:
+    crop: 0, 968, 0, 608
+  /home/box/coding/CTIR/videos/experiment_2/E2_front.avi:
+    crop: 0, 968, 0, 608
+  /home/box/coding/CTIR/videos/experiment_2/E2_side.avi:
+    crop: 0, 968, 0, 608
+  /home/box/coding/CTIR/videos/experiment_2/E2_top.avi:
+    crop: 0, 968, 0, 608
+bodyparts:
+- nose
+- eye_left
+- eye_right
+- ear_left
+- ear_right
+- front_paw_left
+- front_paw_right
+- body_center
+- tail_base
+- lever_tip
+- upper_lever_tip
+- stick_head
+- ball
+- sliding_door
+- sliding_door_top_left
+- sliding_door_top_right
+- sliding_door_bottom_left
+- sliding_door_bottom_right
+- plateau_middle_front
+- plateau_middle_back
+- plateau_right_front
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 20
+
+    # Plotting configuration
+skeleton:
+- - bodypart1
+  - bodypart2
+- - objectA
+  - bodypart3
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 12
+alphavalue: 0.7
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.9
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
